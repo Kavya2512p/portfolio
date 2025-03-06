@@ -19,7 +19,7 @@ const Chatbot = () => {
         const resumeData = {
             name: "Kavya",
             workExperience: "Graduate Engineer Trainee at Vodafone Idea Limited (2021 - 2023), (1.5 years)",
-            skills: ["React.js", "JavaScript", "Tailwind CSS", "Node.js", "MongoDB","Express.js","Bootstrap","CSS","HTML"],
+            skills: ["React.js","Tailwind CSS", "Node.js", "MongoDB","Express.js","Bootstrap","CSS","HTML"],
             education: ["B.Tech in Information Technology from SKIT, Jaipur"],
             location:["Jaipur, Rajasthan"],
             certifications: ["MERN Stack Course - WsCube Tech", "Azure Fundamentals Certification"],

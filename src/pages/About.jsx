@@ -27,8 +27,7 @@ export default function About() {
                             <br />
                             &nbsp;&nbsp;'Express',
                             <br />
-                            &nbsp;&nbsp;'DevOps'
-                            <br />
+
                             ];
                         </code>
                     </div>
@@ -61,11 +60,13 @@ export default function About() {
                             "Node.js",
                             "Express.js",
                             "JavaScript",
-                            
+
                             "Bootstrap",
                             "HTML/CSS",
                             "Mongodb",
-                            "Devops"
+                            "Github",
+                            "Netlify",
+                            "Vercel"
                         ].map((skill, index) => (
                             <div key={index} className="border border-white/20 rounded-lg px-4 py-2">
                                 <h4 className="text-white/80 font-medium">{skill}</h4>
