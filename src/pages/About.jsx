@@ -60,7 +60,6 @@ export default function About() {
                             "Node.js",
                             "Express.js",
                             "JavaScript",
-
                             "Bootstrap",
                             "HTML/CSS",
                             "Mongodb",
