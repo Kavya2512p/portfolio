@@ -135,7 +135,7 @@ const Chatbot = () => {
                     className="fixed hover:bg-purple-500 bottom-20 right-6 p-4 rounded-full shadow-lg text-white flex items-center justify-center transition-all animate-bounce"
                 >
                     {isOpen ? (
-                        <span className="text-2xl font-bold fixed bottom-70 right-8">✖</span> // Close button
+                        <span className="text-2xl font-bold fixed bottom-70 right-8">✖</span> 
                     ) : (
                         <img
                             src={profilepic}
