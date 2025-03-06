@@ -80,7 +80,7 @@ const ProjectsSection = () => {
                             <img
                                 src={project.img}
                                 alt={project.title}
-                                className='w-full h-full border border-gray-100 p-4 object-cover rounded-lg shadow-lg'
+                                className='w-full h-full  p-4 object-cover rounded-lg shadow-[0px_0px_20px_rgba(255,255,255,0.8)]'
                             />
                         </div>
                         <div className='w-full md:w-1/2 p-4 flex flex-col justify-center'>
