@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import {  SiReact, SiNodedotjs } from "react-icons/si";
+import { SiReact, SiNodedotjs } from "react-icons/si";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { DiJavascript } from "react-icons/di";
@@ -20,7 +20,7 @@ const stackItems = [
     {
         id: 2,
         name: "Javascript",
-        icon: <DiJavascript  size={100} />,
+        icon: <DiJavascript size={100} />,
         color: "text-emerald-200",
     },
     {
@@ -44,7 +44,7 @@ const stackItems = [
     {
         id: 6,
         name: "Express.js",
-        icon: <SiExpress  size={100} />,
+        icon: <SiExpress size={100} />,
         color: "text-emerald-200",
     },
     {
@@ -56,13 +56,13 @@ const stackItems = [
     {
         id: 8,
         name: "HTML",
-        icon: <IoLogoHtml5  size={100} />,
+        icon: <IoLogoHtml5 size={100} />,
         color: "text-emerald-200",
     },
     {
         id: 9,
         name: "CSS",
-        icon: <FaCss3Alt  size={100} />,
+        icon: <FaCss3Alt size={100} />,
         color: "text-emerald-200",
     },
 ];
@@ -87,7 +87,7 @@ export const Stack = () => {
             className="py-24 md:py-40 max-w-[1200px] mx-auto text-center"
             id="stack"
         >
-            <h2 className="text-7xl text-gray-100 font-bold mb-20">My Tech Stack</h2>
+            <h2 className="text-7xl text-gray-100 font-bold mb-20">My Tech <span className="text-emerald-300">Stack</span></h2>
             <div className="flex flex-wrap justify-center gap-8" ref={ref}>
                 {stackItems.map((item, index) => (
                     <motion.div

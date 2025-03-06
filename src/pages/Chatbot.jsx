@@ -13,15 +13,15 @@ const Chatbot = () => {
 
     // Function to fetch response from Together API
     const fetchBotResponse = async (userMessage) => {
-        const API_KEY = import.meta.env.VITE_TOGETHER_API_KEY;  
+        const API_KEY = import.meta.env.VITE_TOGETHER_API_KEY;
         const API_URL = "https://api.together.xyz/v1/chat/completions";
 
         const resumeData = {
             name: "Kavya",
             workExperience: "Graduate Engineer Trainee at Vodafone Idea Limited (2021 - 2023), (1.5 years)",
-            skills: ["React.js","Tailwind CSS", "Node.js", "MongoDB","Express.js","Bootstrap","CSS","HTML"],
+            skills: ["React.js", "Tailwind CSS", "Node.js", "MongoDB", "Express.js", "Bootstrap", "CSS", "HTML"],
             education: ["B.Tech in Information Technology from SKIT, Jaipur"],
-            location:["Jaipur, Rajasthan"],
+            location: ["Jaipur, Rajasthan"],
             certifications: ["MERN Stack Course - WsCube Tech", "Azure Fundamentals Certification"],
             contact: { email: "kavyapash25@gmail.com", phone: "+91 6377358554" }
         };
@@ -63,7 +63,7 @@ const Chatbot = () => {
         if (input.trim() === "") return;
         const userMessage = { text: input, sender: "user" };
         setMessages((prev) => [...prev, userMessage]);
-        setInput(""); 
+        setInput("");
         const botReplyText = await fetchBotResponse(input);
         const botReply = { text: botReplyText, sender: "bot" };
         setMessages((prev) => [...prev, botReply]);
@@ -91,7 +91,7 @@ const Chatbot = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="flex">
+                    <div className="flex w-full">
                         <input
                             type="text"
                             value={input}
@@ -100,7 +100,7 @@ const Chatbot = () => {
                             placeholder="Type a message..."
                             autoFocus
 
-                            className="flex-1 p-2 rounded-l bg-black text-white border border-gray-700 
+                            className=" flex-1 p-2 rounded-l bg-black text-white border border-gray-700 
                focus:outline-none focus:ring-2 focus:ring-green-400 cursor-auto"
                         />
                         <button
@@ -118,9 +118,9 @@ const Chatbot = () => {
                         Hello...!!
                     </div>
                 )}
-                <button
+                {/* <button
                     onClick={toggleChat}
-                    className={`hover:bg-purple-500 text-white p-4 rounded-full  shadow-lg fixed bottom-20 right-25 flex items-center justify-center transition-all animate-bounce ${isOpen ? "bottom-4 right-87" : "right-6"
+                    className={`hover:bg-purple-500 text-white p-4 rounded-full  shadow-lg fixed bottom-20 right-25 flex items-center justify-center transition-all animate-bounce ${isOpen ? "md:bottom-4 md:right-87" : "right-6"
                         }`}
                 >
                     <img
@@ -128,7 +128,23 @@ const Chatbot = () => {
                         alt="John Doe"
                         className="w-20 h-20 relative z-10 object-cover rounded-full shadow-[0_0_24px_rgba(255,255,255,0.9)]"
                     />
+                </button> */}
+
+                <button
+                    onClick={toggleChat}
+                    className="fixed hover:bg-purple-500 bottom-20 right-6 p-4 rounded-full shadow-lg text-white flex items-center justify-center transition-all animate-bounce"
+                >
+                    {isOpen ? (
+                        <span className="text-2xl font-bold fixed bottom-70 right-8">✖</span> // Close button
+                    ) : (
+                        <img
+                            src={profilepic}
+                            alt="Chat Icon"
+                            className="w-20 h-20 relative z-10 object-cover rounded-full shadow-[0_0_24px_rgba(255,255,255,0.9)]"
+                        />
+                    )}
                 </button>
+
 
             </div>
         </div>
