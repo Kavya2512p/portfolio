@@ -130,12 +130,14 @@ const Chatbot = () => {
                     />
                 </button> */}
 
+
                 <button
                     onClick={toggleChat}
-                    className="fixed hover:bg-purple-500 bottom-20 right-6 p-4 rounded-full shadow-lg text-white flex items-center justify-center transition-all animate-bounce"
+                    className={`fixed bottom-20 z-20 right-26 flex items-center justify-center transition-all animate-bounce 
+        ${isOpen ? "bg-transparent p-0 hover:bg-transparent" : "hover:bg-purple-500 p-4 rounded-full shadow-lg text-white"}`}
                 >
                     {isOpen ? (
-                        <span className="text-2xl font-bold fixed bottom-70 right-8">✖</span> 
+                        <span className="text-3xl fixed bottom-70 -right-11 font-bold text-white">✖</span>
                     ) : (
                         <img
                             src={profilepic}
@@ -144,6 +146,7 @@ const Chatbot = () => {
                         />
                     )}
                 </button>
+
 
 
             </div>
