@@ -91,7 +91,7 @@ const Chatbot = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="flex w-full">
+                    <div className="flex w-full max-w-full items-center space-x-1">
                         <input
                             type="text"
                             value={input}
